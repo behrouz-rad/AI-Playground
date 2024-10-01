@@ -1,0 +1,5 @@
+It took: 00:00:04 
+  </file></code><file><name>20220927.diff</name> <mode>100644</mode><size>5843</size>
+    <checksum type:crc64="ckSUM" class="external" >1444b2a394</checksum></file></package>
+    </items>
+    """

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35005.142
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AiPlayground.Test", "AiPlayground.Test\AiPlayground.Test.csproj", "{08D200D2-3D8B-4A32-BA6C-CF955D5B9D5F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CB2704D5-50B8-48BE-B401-72A521180E79}"
+	ProjectSection(SolutionItems) = preProject
+		..\Directory.Build.props = ..\Directory.Build.props
+		..\Directory.Packages.props = ..\Directory.Packages.props
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{08D200D2-3D8B-4A32-BA6C-CF955D5B9D5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08D200D2-3D8B-4A32-BA6C-CF955D5B9D5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08D200D2-3D8B-4A32-BA6C-CF955D5B9D5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08D200D2-3D8B-4A32-BA6C-CF955D5B9D5F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3070D3E6-6897-44D5-8A97-6E17F3BBDC64}
+	EndGlobalSection
+EndGlobal

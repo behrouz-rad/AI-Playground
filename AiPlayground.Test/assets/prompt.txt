@@ -1,0 +1,68 @@
+You are an expert code reviewer with deep knowledge of software development practices.
+You have been given the output of the "git diff" command, which shows the differences between the original and modified versions of a set of files.
+Please review these changes and provide a structured code review, starting with the following statement:'This is the code review from AI'.
+Then, for each file, list the filename as a bullet point and describe the changes in that file as sub-bullets under the filename.
+Focus on explaining the purpose of the changes, potential improvements, best practices, and any potential issues.
+The review should be professional, concise, and informative.
+Answer as quickly as possible.
+Here is the "git diff" output for review:
+
+diff --git a/global.json b/global.json
+index c55fa7d..ecdcdb9 100644
+--- a/global.json
++++ b/global.json
+@@ -1,6 +1,6 @@
+ {
+   "sdk": {
+-    "version": "8.0.401",
++    "version": "8.0.402",
+     "rollForward": "disable"
+   }
+ }
+diff --git a/src/TestProject.Console/Calculate.cs b/src/TestProject.Console/Calculate.cs
+new file mode 100644
+index 0000000..47c8b62
+--- /dev/null
++++ b/src/TestProject.Console/Calculate.cs
+@@ -0,0 +1,16 @@
++﻿// 2024 (c) Behrouz Rad. All rights reserved.
++
++using System;
++using System.Collections.Generic;
++using System.Linq;
++using System.Text;
++using System.Threading.Tasks;
++
++namespace TestProject.Console;
++internal class Calculate
++{
++  public static int Sum(int num1, int num2)
++  {
++    return num1 + num2;
++  }
++}
+diff --git a/src/TestProject.Console/Models/RegistrationOptions.cs b/src/TestProject.Console/Models/RegistrationOptions.cs
+index f6b4262..84bddcc 100644
+--- a/src/TestProject.Console/Models/RegistrationOptions.cs
++++ b/src/TestProject.Console/Models/RegistrationOptions.cs
+@@ -10,6 +10,6 @@ public class RegistrationOptions
+   public required RegistrationRequest RegistrationRequest { get; set; }
+   public int RunAppOnPort { get; set; }
+   public required Uri ServiceRegistryAddress { get; set; }
+-  public int RetryCount { get; set; } = 5;
++  public int RetryCount { get; set; } = 8;
+   public HttpClient? HttpClient { get; set; }
+ }
+diff --git a/src/TestProject.Console/TestProject.Console.csproj b/src/TestProject.Console/TestProject.Console.csproj
+index dfacf85..35452dc 100644
+--- a/src/TestProject.Console/TestProject.Console.csproj
++++ b/src/TestProject.Console/TestProject.Console.csproj
+@@ -9,8 +9,8 @@
+   <ItemGroup>
+     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
+     <PackageReference Include="Microsoft.Extensions.Http" Version="8.0.0" />
++    <PackageReference Include="Microsoft.Extensions.Http.Resilience" Version="8.9.1" />
+     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.1" />
+-    <PackageReference Include="Polly" Version="8.4.1" />
+     <PackageReference Include="FluentResults" Version="3.16" />
+   </ItemGroup>

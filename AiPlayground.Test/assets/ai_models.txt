@@ -1,0 +1,10 @@
+﻿codellama:latest
+magicoder:latest
+phi3:latest
+yi-coder:latest
+dolphincoder:latest
+wizardcoder:latest
+codegeex4:latest
+starcoder2:latest
+nuextract:latest
+deepseek-coder-v2:16b

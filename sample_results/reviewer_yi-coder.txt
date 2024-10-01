@@ -1,0 +1,13 @@
+It took: 00:02:24 
+ This is the review from AI, based on git diff changes in your latest commit:
+
+- `global.json`: The SDK version has been updated to "8.0.402" instead of "8.0.401". It's always good to keep your projects up-to-date with the latest SDK improvements and bug fixes.
+  
+- `Calculate.cs`: 
+     This seems like the addition of a new internal class for calculation functionality. The use of 'internal' means this is not accessible outside its assembly, which can be a good way of encapsulating specific implementations that aren't meant to be used directly by other parts of code. Inside it there exists a static method `Sum()` accepting two integer parameters and returning their sum, which appears to be the core function of Calculate class. The addition of a clear namespace (TestProject.Console) provides an organized structure for your project.
+  
+- `RegistrationOptions.cs`: Here, Retry count has been updated from 5 to 8 instead. It may affect how many times it attempts to connect in cases where connection errors occur. This update can help manage potential performance issues that might arise during over aggressive retry attempts.
+    
+- `TestProject.Console.csproj`: Additional package references for "Microsoft.Extensions.Http.Resilience" (version 8.9.1) and "Polly" have been added. It provides libraries to aid with handling resilience in place of Polly which can help manage HTTP request retries, timeouts and circuit breakers.
+    
+It's important that a clear understanding of these changes is attained by the reviewer before implementing them into production code. Potential issues that arise from such changes should be thoroughly discussed amongst team members especially when handling sensitive data or performance-based applications where any potential increase or decrease in efficiency is significant.

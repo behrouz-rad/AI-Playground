@@ -1,0 +1,18 @@
+It took: 00:01:48 
+ This is the code review from AI. 
+
+File: global.json
+- Change '8.0.401' to '8.0.402'. Update the version of Microsoft SDK for .NET so that it could get future updates automatically.
+
+File: src/TestProject.Console/Calculate.cs 
++ Adding new file to the project and a class called Calculate with one method Sum that returns sum of two integers.
++ Use async/await keywords for proper asynchronous operations, instead of returning Task as return type.
+
+File: src/TestProject.Console/Models/RegistrationOptions.cs
++ Change '8' to '10', it seems like the number of retries should be a higher value.
+- Default value for RetryCount has been changed from 5 to 8 which might not be necessary if the retry count is not explicitly needed.
++ Use nullable reference types instead of explicit 'public HttpClient?'. It would throw null reference exception in case it is used before initialization.
+
+File: src/TestProject.Console/TestProject.Console.csproj
+- Update Polly package version to '8.4.1' to the latest version '7.5.0', which contains fix to avoid NullReferenceExceptions for Policy methods.
++ Add new package Microsoft.Extensions.Http.Resilience, it can help to handle network failures with Retry/Fallback policies. 
