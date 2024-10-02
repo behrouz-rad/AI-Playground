@@ -19,20 +19,20 @@ string? appFolderPath = Path.GetDirectoryName(appFullPath);
 string imageRecognitionFullPath = Path.Combine(appFolderPath!, "Assets", "image_recognition.jpg");
 
 // Text recognition
-//AiHelper.WriteTitle("Text recognition is in process...");
+AiHelper.WriteTitle("Text recognition is in process...");
 
-//string textRecognitionFullPath = Path.Combine(appFolderPath!, "Assets", "text_recognition.jpg");
-//string? textRecognitionResponse = await AiHelper.OcrImageAsync(textRecognitionFullPath, cts.Token);
-//AiResponse? textRecognitionModel = JsonSerializer.Deserialize<AiResponse>(textRecognitionResponse) ?? new AiResponse();
-//WriteLine(textRecognitionModel.Response);
-//WriteLine();
+string textRecognitionFullPath = Path.Combine(appFolderPath!, "Assets", "text_recognition.jpg");
+string? textRecognitionResponse = await AiHelper.OcrImageAsync(textRecognitionFullPath, cts.Token);
+AiResponse? textRecognitionModel = JsonSerializer.Deserialize<AiResponse>(textRecognitionResponse) ?? new AiResponse();
+WriteLine(textRecognitionModel.Response);
+WriteLine();
 
 // Image recognition using Hugging Face
-//AiHelper.WriteTitle("Image recognition using Hugging Face is in process...");
+AiHelper.WriteTitle("Image recognition using Hugging Face is in process...");
 
-//string? imageRecognition1Response = await AiHelper.DescribeImageAsync(ModelMode.Online, imageRecognitionFullPath, cts.Token);
-//WriteLine(imageRecognition1Response);
-//WriteLine();
+string? imageRecognition1Response = await AiHelper.DescribeImageAsync(ModelMode.Online, imageRecognitionFullPath, cts.Token);
+WriteLine(imageRecognition1Response);
+WriteLine();
 
 // Image recognition using Ollama
 AiHelper.WriteTitle("Image recognition using Ollama is in process...");
